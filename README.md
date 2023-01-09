@@ -1,13 +1,13 @@
 # MIPS_project   
 ## Introduction   
-This is the final project for the Digital Circuit Design course. The target is to implement a MIPS in verilog and synthesize the circuit. For detail information about the design, please refer to MIPS_intro.pdf and DSD_FinalDescription.pdf in /spec_and_materials.
-## Design Details
-Please refer to MIPS project.pdf for design details.  
+This was the final project for Digital Circuit Design. The target is to implement a MIPS processor. I rewrite the project to achive better performance and code readability. For details about the changes, please refer to MIPS_V2.pdf. DSD_FinalDescription.pdf defines the instructions supported as well as the evaluation metric.
+
+## Design Details  
 The MIPS and cache implementation can be found in baseline/src/CHIP.v.  
 The testbench is baseline/src/Final_tb.v.  
 
 ## Usage
-For rtl-level simulation, in baseline/src:   
+For rtl-level simulation, in src/:   
 ```
-ncverilog Final_tb.v CHIP.v slow_memory.v +define+hasHazard +access+r
+ncverilog Final_tb.v CHIP.v cache.v control.v mips.v slow_memory.v +define+hasHazard +access+r
 ```   
